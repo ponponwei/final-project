@@ -69,7 +69,7 @@ class Deck:
             print ("Dealer score:", dealer_score)
             print ("Player score:", player_score)
             print("You lose")
-        #window.destroy()
+        window.destroy()
     def hit(self):       #allows hit to deal to player
         self.deal_to_player()
     def deal_to_dealer(self):      #allows hit to deal to dealer
@@ -86,7 +86,7 @@ class Deck:
                 window.quit()
                 print("Dealer Busted")
                 print("YOU WIN")
-                #window.destroy()
+                window.destroy()
     def deal_to_player(self):       #prints results, meant to deal new cards to players when they press hit
         player_hand.append(self.deck_list.pop(0))
         self.player.pack(side=tk.RIGHT)
@@ -97,7 +97,7 @@ class Deck:
             window.quit()
             print("Your Busted")
             print ("You Lose")
-            #window.destroy()
+            window.destroy()
     def get_player_score(self):
         player_value=0
         for card in player_hand:
